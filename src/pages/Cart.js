@@ -49,7 +49,7 @@ const Cart = () => {
           alignItems: "center",
         }}
       >
-        {products.length > 0 ? (
+        {products?.length > 0 ? (
           <Box>
             <Button onClick={() => dispatch(clearCart())}>
               Limpiar carrito

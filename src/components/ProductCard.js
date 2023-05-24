@@ -16,8 +16,12 @@ const ProductCard = ({ product }) => {
   const productsOnCart = useSelector((state) => state.cart);
 
   const addToCar = () => {
-    if (!productsOnCart.find((prod) => prod.id === product.id))
-      dispatch(addProductToCart(product));
+    if (productsOnCart.length === 0) {
+      dispatch(addProductToCart([product]));
+    } else {
+      if (!productsOnCart.find((prod) => prod.id === product.id))
+        dispatch(addProductToCart([...productsOnCart, product]));
+    }
   };
 
   return (

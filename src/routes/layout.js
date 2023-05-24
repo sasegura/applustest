@@ -33,7 +33,7 @@ const Layout = () => {
             <Box sx={{ display: "flex" }}>
               <Typography variant="h6">{user.username}</Typography>
               <Button color="inherit" href={"cart"}>
-                <Badge badgeContent={cart.length} color="secondary">
+                <Badge badgeContent={cart?.length} color="secondary">
                   <ShoppingCartIcon />
                 </Badge>
               </Button>

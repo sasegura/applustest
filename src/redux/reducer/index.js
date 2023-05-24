@@ -5,9 +5,9 @@ const initialState = {
   user: {},
   token: "",
   loadingProducts: false,
-  products: [],
+  products: null,
   productsError: {},
-  cart: null,
+  cart: [],
 };
 const reducer = (state = initialState, action) => {
   const { payload } = action;
@@ -76,7 +76,7 @@ const reducer = (state = initialState, action) => {
       };
 
     case "ADD_PRODUCT":
-      return { ...state, cart: [...state?.cart, payload] };
+      return { ...state, cart: payload };
     case "DELETE_PRODUCT":
       return {
         ...state,

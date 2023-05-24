@@ -12,7 +12,7 @@ const Products = () => {
 
   useEffect(() => {
     if (!products) dispatch(getProducts());
-  });
+  }, []);
 
   return (
     <Box
@@ -30,7 +30,7 @@ const Products = () => {
           sx={{ marginBottom: 1 }}
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
         >
-          {products.map((product) => (
+          {products?.map((product) => (
             <Grid item xs={12} key={product.id} sm={6} md={3}>
               <ProductCard product={product} />
             </Grid>
