@@ -7,7 +7,8 @@ const pages = [{ title: "Productos", link: "products" }];
 
 const Layout = () => {
   const state = useSelector((state) => state);
-  const { isloggedIn, user, cart } = state;
+  const { isloggedIn, user } = state.userReducer;
+  const { cart } = state.cartReducer;
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">

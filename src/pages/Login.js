@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { useSelector, useDispatch } from "react-redux";
 import { loginUser } from "../redux/actions";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import IsLoadding from "../components/isLoadding";
@@ -20,9 +20,9 @@ function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const logedin = useSelector((state) => state.isloggedIn);
-  const loginError = useSelector((state) => state.loginError);
-  const isloginUser = useSelector((state) => state.isloginUser);
+  const logedin = useSelector((state) => state.userReducer.isloggedIn);
+  const loginError = useSelector((state) => state.userReducer.loginError);
+  const isloginUser = useSelector((state) => state.userReducer.isloginUser);
 
   const { register, handleSubmit } = useForm({
     defaultValues,

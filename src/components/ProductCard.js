@@ -13,7 +13,7 @@ import { useSelector } from "react-redux";
 const ProductCard = ({ product }) => {
   const { title, image, category, price } = product;
   const dispatch = useDispatch();
-  const productsOnCart = useSelector((state) => state.cart);
+  const productsOnCart = useSelector((state) => state.cartReducer.cart);
 
   const addToCar = () => {
     if (productsOnCart.length === 0) {

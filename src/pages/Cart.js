@@ -22,8 +22,10 @@ const Cart = () => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.cart);
-  const loadingProducts = useSelector((state) => state.loadingProducts);
+  const products = useSelector((state) => state.cartReducer.cart);
+  const loadingProducts = useSelector(
+    (state) => state.cartReducer.loadingProducts
+  );
 
   const handlePay = () => {
     dispatch(clearCart());

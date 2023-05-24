@@ -1,17 +1,20 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../redux/actions";
+import { clearProductsList, getProducts } from "../redux/actions";
 import ProductCard from "../components/ProductCard";
 import { Box, Grid } from "@mui/material";
 import IsLoadding from "../components/isLoadding";
 
 const Products = () => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.products);
-  const loadingProducts = useSelector((state) => state.loadingProducts);
+  const products = useSelector((state) => state.productsReducer.products);
+  const loadingProducts = useSelector(
+    (state) => state.productsReducer.loadingProducts
+  );
 
   useEffect(() => {
     if (!products) dispatch(getProducts());
+    return () => clearProductsList();
   }, []);
 
   return (

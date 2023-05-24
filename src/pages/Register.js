@@ -21,9 +21,9 @@ function Register() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const logedin = useSelector((state) => state.isloggedIn);
-  const loginError = useSelector((state) => state.loginError);
-  const isloginUser = useSelector((state) => state.isloginUser);
+  const logedin = useSelector((state) => state.userReducer.isloggedIn);
+  const loginError = useSelector((state) => state.userReducer.loginError);
+  const isloginUser = useSelector((state) => state.userReducer.isloginUser);
 
   const {
     register,
