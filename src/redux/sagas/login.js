@@ -5,7 +5,7 @@ import {
   loginUserStart,
   loginUserSuccess,
 } from "../actions/login";
-import apiCall from "../api";
+import apiCall from "../../utils/api";
 
 export function* loginUser({ payload }) {
   try {

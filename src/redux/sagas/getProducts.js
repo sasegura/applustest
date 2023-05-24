@@ -5,7 +5,7 @@ import {
   getProductsStart,
   getProductsSuccess,
 } from "../actions/product";
-import apiCall from "../api";
+import apiCall from "../../utils/api";
 
 export function* getProducts() {
   try {

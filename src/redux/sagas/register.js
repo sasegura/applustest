@@ -5,7 +5,7 @@ import {
   registerUserStart,
   registerUserSuccess,
 } from "../actions/register";
-import apiCall from "../api";
+import apiCall from "../../utils/api";
 
 export function* registerUser({ payload }) {
   try {
