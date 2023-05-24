@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Descripción del proyecto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El objetivo de esta prueba técnica es evaluar tus habilidades en el desarrollo de una aplicación web utilizando el framework React.js en JavaScript (ES6), la gestión de estados con Redux utilizando hooks, y la comunicación con APIs mediante Axios y Redux-Sagas.
 
-## Available Scripts
+Debes construir una aplicación que permita a los usuarios iniciar sesión, ver una lista de productos y agregar productos a una cesta de compra. Se deben realizar validaciones adicionales, como redirigir al usuario al registro si el inicio de sesión falla y redirigir al inicio de sesión si se intenta comprar sin haber iniciado sesión.
 
-In the project directory, you can run:
+## Requisitos técnicos
 
-### `npm start`
+    *   Utilizar el framework React.js y JavaScript (ES6) para desarrollar la aplicación.
+    *   Implementar el control de estados utilizando Redux y Redux-Sagas.
+    *   La aplicación debe tener una página de inicio de sesión que incluya campos para ingresar el nombre de usuario y contraseña.
+    *   Al enviar el formulario de inicio de sesión, la aplicación debe hacer una solicitud a una API utilizando Axios para verificar las credenciales del usuario.
+    *   Si las credenciales son válidas, la aplicación debe almacenar la información de inicio de sesión en el estado de Redux y redirigir al usuario a una página de lista de productos.
+    *   Si las credenciales son inválidas, la aplicación debe redirigir al usuario a una página de registro para dar de alta un nuevo usuario.
+    *   En la página de lista de productos, la aplicación debe mostrar una lista de productos disponibles.
+    *   Cada producto debe tener un botón "Agregar a la cesta" que permita agregar el producto a la cesta de compra.
+    *   La aplicación debe tener una página de cesta de compra que muestre los productos agregados a la cesta.
+    *   Si se intenta acceder a la página de cesta de compra sin haber iniciado sesión, la aplicación debe redirigir al usuario a la página de inicio de sesión.
+    *   En la página de cesta de compra, debe haber un botón "Comprar" que simule la compra de los productos y muestre un mensaje de confirmación.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Consideraciones adicionales
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    >   Puedes utilizar cualquier librería o enfoque para el enrutamiento (por ejemplo, React Router) y para la validación de formularios (por ejemplo, Formik).
+    >   Para las APIs, puedes utilizar una API simulada o una API real (por ejemplo, una API de prueba como JSONPlaceholder).
+    >   Se recomienda organizar el código en componentes reutilizables y mantener una estructura de proyecto clara.
+    >   La interfaz de usuario y el diseño visual son importantes, pero no es necesario que sean extremadamente elaborados. Puedes utilizar componentes de UI > preexistentes o frameworks como Bootstrap para agilizar el proceso.
+    >   Se valorará el uso adecuado de los conceptos y patrones mencionados, así como la calidad y legibilidad del código.
+    >   La prueba técnica no tiene una duración específica, pero se espera que el desarrollo y la implementación de las funcionalidades mencionadas se realicen en un tiempo razonable.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+¡Buena suerte con la prueba técnica! Si tienes alguna pregunta adicional, no dudes en hacerla.
